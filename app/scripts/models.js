@@ -7,7 +7,6 @@
       },
 
     defaults: {
-        id              :  '_id',
         name            :  'needs_a_name',
         animal          :  'needs_a_type',
         status          :  'available',
@@ -19,6 +18,6 @@
 
     urlRoot: 'http://tiny-pizza-server.herokuapp.com/collections/adoptpets',
 
-    idAttribute: '_id'
+
 
   });

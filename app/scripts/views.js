@@ -1,4 +1,4 @@
-var AdoptablePetView = Backbone.View.extend({
+var AdoptablePetListView = Backbone.View.extend({
 
     initialize: function(){
         this.listenTo(this.collection, 'add', this.render);
@@ -8,9 +8,13 @@ var AdoptablePetView = Backbone.View.extend({
       },
 
     render: function(){
-
+        var source = $('#pet-list-template').html();
+        var template = Handlebars.compile(source);
+        var rendered = template({ourPets: this.collection.toJSON()})
+        this.$el.append(rendered);
         return this;
-    },
+      },
+
 
     events: {
 
@@ -24,6 +28,6 @@ var AdoptablePetView = Backbone.View.extend({
 
 });
 
-var adoptablePetView = new AdoptablePetView ({
+var adoptablePetListView = new AdoptablePetListView ({
   collection: ourPets
 });
