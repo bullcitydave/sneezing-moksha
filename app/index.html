@@ -46,16 +46,29 @@
 
 
 
-        <script id="pet-list-template" type="text/template">
-              <div class="pet">
-                <strong><%- name %></strong>
-              </div>
-        </script>
+         <script id="pet-list-template" type="text/x-handlebars-template">
+            {{#each ourPets}}
+               <div class="pet">
+                 <strong>{{name}}</strong>
+                 <p><img src="{{mainPhotoUrl}}"</p>
+               </div>
+             {{/each}}
+         </script>
 
         <div class = "pet-list">
           Pets will go here
         </div>
 
+
+        <script id="pet-single-template" type="text/template">
+              <div class="pet">
+                <strong><%- name %></strong>
+              </div>
+        </script>
+
+        <div class = "pet-single">
+          Single pet will go here
+        </div>
 
   </body>
 </html>
