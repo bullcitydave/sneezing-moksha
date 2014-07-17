@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>routes</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="hero-unit">
+      <h1>Pets for Adoption!</h1>
+    </div>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+
+
+
+         <script id="pet-list-template" type="text/x-handlebars-template">
+            {{#each ourPets}}
+               <div class="pet">
+                 <strong><a href="#/pets/{{name}}"> {{name}} </a></strong>
+                 <p><img src="{{mainPhotoUrl}}"</p>
+               </div>
+             {{/each}}
+         </script>
+
+        <div class = "pet-list">
+          Pets will go here
+        </div>
+
+
+        <script id="pet-single-template" type="text/template">
+              <div class="pet">
+                <strong><%- name %></strong>
+                <p>Animal<span><%- animal %></span></p>
+                <p>Status<span><%- status %></span></p>
+                <p>Age<span><%- age %></span></p>
+                <p>Gender<span><%- gender %></span></p>
+                <p>Neutered<span><%- neutered %></span></p>
+                <p><img src="<%- mainPhotoUrl %>"</p>
+                <p class="browse"><a href="#/home">Return to list of adoptable pets</a></p>
+              </div>
+        </script>
+
+        <div class = "pet-single">
+          Single pet will go here
+        </div>
+
+  </body>
+</html>
