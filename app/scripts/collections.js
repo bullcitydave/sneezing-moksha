@@ -10,7 +10,6 @@ var ourPets = new AdoptablePets();
 
 ourPets.add([
   {
-    id             :  '_id',
     name           :  'Moksha',
     animal         :  'dog',
     status         :  'available',
@@ -21,7 +20,6 @@ ourPets.add([
   },
 
   {
-    id             :  '_id',
     name           :  'Emmitt',
     animal         :  'dog',
     status         :  'available',
@@ -32,7 +30,6 @@ ourPets.add([
   },
 
   {
-    id             :  '_id',
     name           :  'Zellouisa',
     animal         :  'cat',
     status         :  'available',

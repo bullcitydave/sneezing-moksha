@@ -52,7 +52,7 @@ var AdoptablePetView = Backbone.View.extend({
     render: function(){
         var source = $('#pet-single-template').html();
         console.log('Source:\n' + source);
-        var rendered = _.template(source,{name : 'Moksha'}); 
+        var rendered = _.template(source,this.model.toJSON()); 
         console.log('Rendered:\n' + rendered);
         this.$el.append(rendered); 
         return this;

@@ -16,7 +16,7 @@
         mainPhotoUrl    :  '#'
       },
 
-    urlRoot: 'http://tiny-pizza-server.herokuapp.com/collections/adoptpets',
+    // urlRoot: 'http://tiny-pizza-server.herokuapp.com/collections/adoptpets',
 
 
 
