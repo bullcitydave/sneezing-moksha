@@ -24,3 +24,23 @@ body {
     letter-spacing: -1px;
   }
 }
+
+.sub-page {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%
+}
+
+.pet-single {
+  @extend .sub-page;
+  display: none;
+}
+
+.pet-list {
+  @extend .sub-page;
+}
+
+img {
+  width: 50%;
+}

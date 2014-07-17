@@ -27,8 +27,6 @@
 
     <div class="hero-unit">
       <h1>Pets for Adoption!</h1>
-
-      <p>Don't forget to update your readme file!!</p>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -49,7 +47,7 @@
          <script id="pet-list-template" type="text/x-handlebars-template">
             {{#each ourPets}}
                <div class="pet">
-                 <strong>{{name}}</strong>
+                 <strong><a href="#/pets/{{name}}"> {{name}} </a></strong>
                  <p><img src="{{mainPhotoUrl}}"</p>
                </div>
              {{/each}}
@@ -63,6 +61,13 @@
         <script id="pet-single-template" type="text/template">
               <div class="pet">
                 <strong><%- name %></strong>
+                <p>Animal<span><%- animal %></span></p>
+                <p>Status<span><%- status %></span></p>
+                <p>Age<span><%- age %></span></p>
+                <p>Gender<span><%- gender %></span></p>
+                <p>Neutered<span><%- neutered %></span></p>
+                <p><img src="<%- mainPhotoUrl %>"</p>
+                <p class="browse"><a href="#/home">Return to list of adoptable pets</a></p>
               </div>
         </script>
 
